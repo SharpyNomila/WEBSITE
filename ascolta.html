@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Listen - Sharpy Nomila</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      background: #121212;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+    }
+    header, nav, footer {
+      max-width: 900px;
+      margin: auto;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: #ffffff;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav a.active {
+      border-bottom: 2px solid #66ccff;
+      padding-bottom: 4px;
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    .track {
+      background: #222;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      align-items: center;
+    }
+    .cover {
+      width: 140px;
+      height: 140px;
+      border-radius: 12px;
+      object-fit: cover;
+      flex-shrink: 0;
+      box-shadow: 0 0 8px #ffffff88;
+    }
+    .player-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    h2 {
+      margin: 0 0 12px 0;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #ffffff;
+    }
+
+    /* Barra progresso personalizzata */
+    .waveform {
+      background: #444;
+      border-radius: 10px;
+      height:   15px;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      box-shadow: inset 0 0 8px #000;
+    }
+    .progress {
+      background: #00d0ff;
+      height: 100%;
+      width: 0%;
+      transition: width 0.15s linear;
+      border-radius: 10px 0 0 10px;
+    }
+
+    /* Pulsante play/pause */
+    .custom-play-btn {
+      margin-top: 15px;
+      border: none;
+      background: none;
+      color: #ffffff;
+      font-size: 32px;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: color 0.3s ease;
+    }
+    .custom-play-btn:hover {
+      color: #ffffff;
+    }
+
+    /* Footer social */
+    footer {
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+      padding: 15px 0;
+    }
+    .social-links a {
+      margin: 0 8px;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SHARPY NOMILA</h1>
+  <p>My music</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="spotify.html">Spotify</a>
+    <a href="applemusic.html">Apple Music</a>
+    <a href="produzioni.html">Productions</a>
+    <a href="contatti.html">Contacts</a>
+     <a href="ascolta.html" class="active">Listen</a>
+</nav>
+<main>
+  <h1>Ascolta Sharpy Nomila</h1>
+
+  <div class="track">
+    <img src="img/3.png" alt="Copertina Canzone 1" class="cover" />
+    <div class="player-container">
+      <h2>LIMBO</h2>
+      <div class="waveform" data-audio="audio1">
+        <div class="progress" id="progress1"></div>
+      </div>
+      <button class="custom-play-btn" data-audio="audio1"><i class="fa-solid fa-play"></i></button>
+      <audio id="audio1" src="music/1.wav"></audio>
+    </div>
+  </div>
+
+  <div class="track">
+    <img src="img/6.jpg" alt="Copertina Canzone 2" class="cover" />
+    <div class="player-container">
+      <h2>DIAVOLO A MILANO</h2>
+      <div class="waveform" data-audio="audio2">
+        <div class="progress" id="progress2"></div>
+      </div>
+      <button class="custom-play-btn" data-audio="audio2"><i class="fa-solid fa-play"></i></button>
+      <audio id="audio2" src="music/2.wav"></audio>
+    </div>
+  </div>
+
+  <div class="track">
+    <img src="img/7.jpg" alt="Copertina Canzone 3" class="cover" />
+    <div class="player-container">
+      <h2>THEY DON'T CARE ABOUT US REMIX</h2>
+      <div class="waveform" data-audio="audio3">
+        <div class="progress" id="progress3"></div>
+      </div>
+      <button class="custom-play-btn" data-audio="audio3"><i class="fa-solid fa-play"></i></button>
+      <audio id="audio3" src="music/3.wav"></audio>
+    </div>
+  </div>
+
+  <div class="track">
+    <img src="img/4.png" alt="Copertina Canzone 4" class="cover" />
+    <div class="player-container">
+      <h2>MARMOCCHI</h2>
+      <div class="waveform" data-audio="audio4">
+        <div class="progress" id="progress4"></div>
+      </div>
+      <button class="custom-play-btn" data-audio="audio4"><i class="fa-solid fa-play"></i></button>
+      <audio id="audio4" src="music/4.wav"></audio>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2025 Sharpy Nomila. All rights reserved.</p>
+  <div class="social-links">
+    <a href="https://www.instagram.com/sharpy_nomil4/" target="_blank" rel="noopener" aria-label="Instagram">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://www.tiktok.com/@sharpynomila" target="_blank" rel="noopener" aria-label="TikTok">
+      <i class="fab fa-tiktok"></i> TikTok
+    </a>
+    <a href="https://www.youtube.com/@sharpynomila" target="_blank" rel="noopener" aria-label="YouTube">
+      <i class="fab fa-youtube"></i> YouTube
+    </a>
+    <a href="https://open.spotify.com/intl-it/artist/13doHfv8EYk1igXBgAPK3o?si=9wLa6WraQLKATZnZwopX7w" target="_blank" rel="noopener" aria-label="Spotify">
+      <i class="fab fa-spotify"></i> Spotify
+    </a>
+  </div>
+</footer>
+
+<script>
+  // Gestione player
+  const buttons = document.querySelectorAll('.custom-play-btn');
+  const waveforms = document.querySelectorAll('.waveform');
+
+  buttons.forEach(btn => {
+    const audioId = btn.dataset.audio;
+    const audio = document.getElementById(audioId);
+    const waveform = document.querySelector(`.waveform[data-audio="${audioId}"]`);
+    const progressBar = waveform.querySelector('.progress');
+
+    // Play/Pause button click
+    btn.addEventListener('click', () => {
+      // Pausa tutti gli altri audio e resetta i bottoni
+      buttons.forEach(b => {
+        const a = document.getElementById(b.dataset.audio);
+        if(a !== audio) {
+          a.pause();
+          b.innerHTML = '<i class="fa-solid fa-play"></i>';
+        }
+      });
+
+      if(audio.paused) {
+        audio.play();
+        btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+      } else {
+        audio.pause();
+        btn.innerHTML = '<i class="fa-solid fa-play"></i>';
+      }
+    });
+
+    // Aggiorna barra progresso
+    audio.addEventListener('timeupdate', () => {
+      if(audio.duration) {
+        const percent = (audio.currentTime / audio.duration) * 100;
+        progressBar.style.width = percent + '%';
+      }
+    });
+
+    // Resetta bottone quando finisce la traccia
+    audio.addEventListener('ended', () => {
+      btn.innerHTML = '<i class="fa-solid fa-play"></i>';
+      progressBar.style.width = '0%';
+    });
+
+    // Clicca sulla waveform per saltare nel brano
+    waveform.addEventListener('click', e => {
+      const rect = waveform.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const width = rect.width;
+      const clickPercent = clickX / width;
+      if(audio.duration) {
+        audio.currentTime = clickPercent * audio.duration;
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Sharpy Nomila - Contatti</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; padding: 0;
+            background: #121212;
+            color: white;
+        }
+        header {
+            background: #222;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        footer {
+            background: #222;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea {
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+            font-size: 1em;
+        }
+        button {
+            padding: 10px;
+            background-color: #444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SHARPY NOMILA</h1>
+    <p>Artista & Produttore Musicale</p>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="spotify.html">Spotify</a>
+    <a href="applemusic.html">Apple Music</a>
+    <a href="produzioni.html">Productions</a>
+    <a href="contatti.html"class="active">Contacts</a>
+    <a href="ascolta.html">Listen</a>
+</nav>
+
+<section>
+    <h2>Contatti</h2>
+    <p>Per info e collaborazioni, usa il form qui sotto o scrivi a: <a href="mailto:info@sharpy.com" style="color: #66ccff;">info@sharpy.com</a></p>
+
+<form action="https://formspree.io/f/mdkznawv" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="grazie.html">
+
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome" required />
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required />
+
+  <label for="messaggio">Messaggio:</label>
+  <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+
+  <button type="submit">Invia</button>
+</form>
+
+</section>
+
+<footer>
+  <p>© 2025 Sharpy Nomila. All rights reserved.</p>
+  <div class="social-links">
+    <a href="https://www.instagram.com/sharpy_nomil4/" target="_blank" rel="noopener" aria-label="Instagram">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://www.tiktok.com/@sharpynomila" target="_blank" rel="noopener" aria-label="TikTok">
+      <i class="fab fa-tiktok"></i> TikTok
+    </a>
+    <a href="https://www.youtube.com/@sharpynomila" target="_blank" rel="noopener" aria-label="YouTube">
+      <i class="fab fa-youtube"></i> YouTube
+    </a>
+    <a href="https://open.spotify.com/intl-it/artist/13doHfv8EYk1igXBgAPK3o?si=9wLa6WraQLKATZnZwopX7w" target="_blank" rel="noopener" aria-label="Spotify">
+      <i class="fab fa-spotify"></i> Spotify
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
